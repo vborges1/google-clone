@@ -1,10 +1,10 @@
-## NextJS - IMDb Clone
+## NextJS - Google Clone
 
-IMDb Clone - feita em NextJS
+Google Clone - feita em NextJS
 
 ## Sobre
 
-Clone do IMDb feito em NextJS, typescript e tailwind
+Clone do buscador do Google feito em NextJS, typescript e tailwind
 
 ### Feito em
 
