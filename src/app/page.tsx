@@ -1,11 +1,11 @@
-export const dynamic = "force-dynamic";
+import HomeHeader from "@/components/HomeHeader";
 
 const API_KEY = process.env.API_KEY
 
 export default async function Home() {
   return (
     <main>
-      ok
+      <HomeHeader />
     </main>
   )
 }
