@@ -2,8 +2,6 @@ import HomeHeader from "@/components/HomeHeader";
 import HomeSearch from "@/components/HomeSearch";
 import Image from "next/image";
 
-const API_KEY = process.env.API_KEY
-
 export default async function Home() {
   return (
     <main>

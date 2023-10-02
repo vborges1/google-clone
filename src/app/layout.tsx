@@ -1,3 +1,4 @@
+import Footer from '@/components/Footer'
 import './globals.css'
 import type { Metadata } from 'next'
 
@@ -15,6 +16,7 @@ export default function RootLayout({
     <html>
       <body>
           {children}
+          <Footer />
       </body>
     </html>
   )
