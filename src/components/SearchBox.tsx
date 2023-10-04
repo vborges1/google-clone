@@ -35,7 +35,10 @@ export default function SearchBox() {
         onClick={() => setTerm('')}
       />
       <BsFillMicFill className="hidden sm:inline-flex text-4xl text-blue-500 pl-4 border-l-2 border-gray-300 mr-3" />
-      <AiOutlineSearch className="text-2xl hidden sm:inline-flex text-blue-500 cursor-pointer" />
+      <AiOutlineSearch 
+        className="text-2xl hidden sm:inline-flex text-blue-500 cursor-pointer" 
+        onClick={handleSubmit}
+      />
     </form>
   )
 }
