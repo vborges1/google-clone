@@ -7,10 +7,13 @@ export default async function WebSearchPage(searchParams: ISearchParams) {
   const { GOOGLE_API_KEY, GOOGLE_CONTEXT_API_KEY } = process.env
   const { searchTerm, startIndex } = searchParams.searchParams
 
-  const response = await fetch(`https://www.googleapis.com/customsearch/v1?key=${GOOGLE_API_KEY}&cx=${GOOGLE_CONTEXT_API_KEY}:omuauf_lfve&&q=${searchTerm}`)
-  console.log(response)
+  const response = await fetch(`https://www.googleapis.com/customsearch/v1?key=${GOOGLE_API_KEY}&cx=${GOOGLE_CONTEXT_API_KEY}:omuauf_lfve&&q=${searchTerm}`)  
   const data = await response.json()
-  console.log(data)
+
+  if (!response.ok) {
+    throw new Error('Ops! Alguma coisa deu errado')
+  }
+
   const results = data.items
   
   if (!results) {
