@@ -9,5 +9,7 @@ export interface IResultItems {
     cacheId: string
     formattedUrl: string
     htmlFormattedUrl: string
-    pagemap: any
+    pagemap: any,
+    mime: string,
+    fileFormat: string
 }

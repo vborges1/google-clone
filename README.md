@@ -27,7 +27,8 @@ npm install && npm run dev
 
 ### Configurando API para geolocalização
 
-Crie uma chave em https://extreme-ip-lookup.com, clone o arquivo .env.example e renomeie para .env.local, então substitua o valor da constante NEXT_PLUBIC_IP_API_KEY (SUA_API_KEY) pela chave gerada.
+Clone o arquivo .env.example e renomeie para .env.local, então substitua o valor da constante API_KEY e CONTEXT_API_KEY.
+Crie uma chave em Google Developer, mais precisamente em Programmable Search Engine, e após gerar sua chave, e copie o API_KEY e o CONTEXT_API_KEY.
 
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
