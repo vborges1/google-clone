@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html>
-      <body>
+      <body className='relative min-h-screen'>
           {children}
           <Footer />
       </body>

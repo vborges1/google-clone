@@ -1,13 +1,13 @@
 import Link from "next/link"
 
-import { IResultItems } from "@/shared/interfaces/resultItems.interface"
 import { ISearchParams } from "@/shared/interfaces/searchParams.interface"
+import WebSearchResults from "@/components/WebSearchResults"
 
 export default async function WebSearchPage(searchParams: ISearchParams) {
   const { GOOGLE_API_KEY, GOOGLE_CONTEXT_API_KEY } = process.env
-  const { searchTerm, startIndex } = searchParams.searchParams
+  const { searchTerm } = searchParams.searchParams
 
-  const response = await fetch(`https://www.googleapis.com/customsearch/v1?key=${GOOGLE_API_KEY}&cx=${GOOGLE_CONTEXT_API_KEY}:omuauf_lfve&&q=${searchTerm}`)  
+  const response = await fetch(`https://www.googleapis.com/customsearch/v1?q=test&key=${GOOGLE_API_KEY}&cx=${GOOGLE_CONTEXT_API_KEY}:omuauf_lfve`)  
   const data = await response.json()
 
   if (!response.ok) {
@@ -29,5 +29,5 @@ export default async function WebSearchPage(searchParams: ISearchParams) {
       </div>
     );
   }
-  return <>{results && <h1>ok</h1>}</>;
+  return <>{results && <WebSearchResults results={data} />}</>;
 }
