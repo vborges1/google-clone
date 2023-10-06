@@ -11,5 +11,6 @@ export interface IResultItems {
     htmlFormattedUrl: string
     pagemap: any,
     mime: string,
-    fileFormat: string
+    fileFormat: string,
+    image: any
 }
