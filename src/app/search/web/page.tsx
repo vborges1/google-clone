@@ -5,10 +5,10 @@ import WebSearchResults from "@/components/WebSearchResults"
 
 export default async function WebSearchPage(searchParams: ISearchParams) {
   const { GOOGLE_API_KEY, GOOGLE_CONTEXT_API_KEY } = process.env
-  const { searchTerm } = searchParams.searchParams
+  const { searchTerm, startIndex } = searchParams.searchParams
 
   await new Promise((resolve: any) => setTimeout(resolve, 10000))
-  const response = await fetch(`https://www.googleapis.com/customsearch/v1?q=${searchTerm}&key=${GOOGLE_API_KEY}&cx=${GOOGLE_CONTEXT_API_KEY}:omuauf_lfve`)  
+  const response = await fetch(`https://www.googleapis.com/customsearch/v1?q=${searchTerm}&key=${GOOGLE_API_KEY}&cx=${GOOGLE_CONTEXT_API_KEY}:omuauf_lfve&start=${startIndex ?? 1}`)  
   const data = await response.json()
 
   if (!response.ok) {
